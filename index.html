@@ -3,36 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Promoción Especial</title>
+    <title>aprende sublimacion</title>
+    <link rel="icon" href="img/logo.jpg">
+
     <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
         body {
             font-family: 'Arial', sans-serif;
             text-align: center;
-            margin: 0;
-            padding: 0;
             background-color: #f4f4f4;
         }
         .container {
-            max-width: 800px;
-            margin: 40px auto;
-            background: white;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
             padding: 30px;
+            max-width: 800px;
+            margin: auto;
+            background: white;
             border-radius: 12px;
             box-shadow: 0 4px 10px rgba(0,0,0,0.15);
-
-            background-image: url('img/fondo.png'); /* Reemplaza con la ruta correcta */
+            background-image: url('img/fondo.png');
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
         }
         .logo {
-            width: 150px;
-            height: 150px;
+            width: 180px;
+            height: 180px;
             border-radius: 50%;
             object-fit: cover;
             margin-bottom: 20px;
         }  
-        h1, h2 {
+        h2 {
             font-size: 32px;
             font-weight: bold;
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.751);
@@ -40,9 +49,8 @@
             text-transform: uppercase;
             letter-spacing: 2px;
             animation: fadeIn 1.5s ease-out;
+            color: #f73c1b;
         }
-        h1 { color: #00089d; }
-        h2 { color: #f73c1b; }
         
         @keyframes fadeIn {
             0% { opacity: 0; }
@@ -50,7 +58,7 @@
         }
         iframe {
             width: 100%;
-            height: 450px;
+            height: 550px;
             border-radius: 8px;
             margin-bottom: 20px;
         }
@@ -80,11 +88,15 @@
         
         @media (max-width: 600px) {
             .container {
-                width: 95%;
+                width: 100%;
+                border-radius: 0;
                 padding: 20px;
             } 
-            h1, h2 {
+            h2 {
                 font-size: 24px;
+            }
+            iframe {
+                height: 400px;
             }
             .button {
                 font-size: 16px;
@@ -97,7 +109,6 @@
     <div class="container">
         <img src="img/logo.jpg" alt="Logo de la empresa" class="logo">
         <h2>Descubre Nuestra Oferta Especial</h2>
-        <h1>Taller El Rentable Negocio de la Sublimación 25 de Marzo 2025</h1>
         <iframe src="https://www.youtube.com/embed/TbNqSJjbOc0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
         <a href="https://go.hotmart.com/U98763713E" class="button primary">🌐 Página Oficial</a>
         <a href="https://pay.hotmart.com/F97019299A?sck=HOTMART_PRODUCT_PAGE&off=5uu9tnsp&hotfeature=32&_gl=1*99wxb2*_gcl_au*MjEwNzg0NjE3Ny4xNzQzMzU5MzQz*_ga*NzE4NzU4Nzk1LjE3MjcxODI1MTc.*_ga_GQH2V1F11Q*MTc0MzM2NjkwNS4xOC4xLjE3NDMzNjY5NTcuOC4wLjA.&bid=1743366990045" class="button success">💥 ¡Suscríbete Ahora!! 🎓</a>
