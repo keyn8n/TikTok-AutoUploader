@@ -2,133 +2,101 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <title>Promoción Especial</title>
     <style>
         body, html {
             height: 100%;
             margin: 0;
             padding: 0;
-        }
-        body {
             font-family: 'Arial', sans-serif;
             text-align: center;
             background-color: #f4f4f4;
         }
+        
+        @media (min-width: 768px) {
+            body {
+                display: none;
+            }
+        }
+        
         .container {
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            padding: 20px;
+            padding: 15px;
             background: white;
             background-image: url('img/fondo.png');
             background-size: cover;
             background-position: center;
-            background-repeat: no-repeat;
             min-height: 100vh;
             box-sizing: border-box;
         }
+        
         .logo {
-            width: 120px; /* Reducido de 180px */
-            height: 120px; /* Reducido de 180px */
+            width: 100px;
+            height: 100px;
             border-radius: 50%;
             object-fit: cover;
             margin-bottom: 15px;
-            border: 3px solid white;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-        }  
-        h2 {
-            font-size: 28px;
-            font-weight: bold;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.751);
-            margin-bottom: 20px;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            animation: fadeIn 1.5s ease-out;
-            color: #f73c1b;
-            background-color: rgba(255,255,255,0.7);
-            padding: 10px 20px;
-            border-radius: 30px;
         }
         
-        @keyframes fadeIn {
-            0% { opacity: 0; }
-            100% { opacity: 1; }
+        h2 {
+            font-size: 22px;
+            font-weight: bold;
+            color: #f73c1b;
+            background: rgba(255,255,255,0.8);
+            padding: 10px;
+            border-radius: 20px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
         }
+        
         iframe {
             width: 100%;
-            height: 65vh; /* Cambiado a viewport height para mejor adaptación */
-            min-height: 300px;
-            max-height: 600px;
+            height: 50vh;
+            min-height: 250px;
             border-radius: 8px;
-            margin-bottom: 20px;
-            border: 3px solid white;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+            margin-bottom: 15px;
         }
+        
         .button {
             display: block;
             width: 90%;
             max-width: 320px;
-            margin: 12px auto;
-            padding: 15px;
-            font-size: 18px;
+            margin: 10px auto;
+            padding: 12px;
+            font-size: 16px;
             font-weight: bold;
             text-decoration: none;
-            border-radius: 8px;
+            border-radius: 6px;
             text-align: center;
-            transition: all 0.3s ease;
+            transition: background 0.3s;
             border: none;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
         }
-        .button.primary { background: #007BFF; color: white; }
-        .button.primary:hover { background: #0056b3; }
-        .button.secondary { background: #28a745; color: white; }
-        .button.secondary:hover { background: #1e7e34; }
-        .button.alert { background: #dc3545; color: white; }
-        .button.alert:hover { background: #bd2130; }
-        .button.warning { 
-            background: #ffc107; 
-            color: black; 
-            background-color: #ffc107 !important; /* Fuerza el color de fondo */
-        }
-        .button.warning:hover { background: #e0a800; }
-        .button.success { background: #28a745; color: white; }
-        .button.success:hover { background: #218838; }
-        
-        @media (max-width: 600px) {
-            .container {
-                padding: 15px;
-            } 
-            h2 {
-                font-size: 22px;
-                padding: 8px 15px;
-            }
-            .logo {
-                width: 100px;
-                height: 100px;
-            }
-            iframe {
-                height: 55vh;
-                min-height: 250px;
-            }
-            .button {
-                font-size: 16px;
-                padding: 12px;
-            }
-        }
+        .primary { background: #007BFF; color: white; }
+        .primary:hover { background: #0056b3; }
+        .success { background: #28a745; color: white; }
+        .success:hover { background: #218838; }
+        .alert { background: #dc3545; color: white; }
+        .alert:hover { background: #bd2130; }
+        .secondary { background: #28a745; color: white; }
+        .secondary:hover { background: #1e7e34; }
+        .warning { background: #ffc107; color: black; }
+        .warning:hover { background: #e0a800; }
     </style>
 </head>
 <body>
     <div class="container">
-        <img src="img/logo.jpg" alt="Logo de la empresa" class="logo">
+        <img src="img/logo.jpg" alt="Logo" class="logo">
         <h2>Descubre Nuestra Oferta Especial</h2>
         <iframe src="https://www.youtube.com/embed/TbNqSJjbOc0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
         <a href="https://go.hotmart.com/U98763713E" class="button primary">🌐 Página Oficial</a>
-        <a href="https://pay.hotmart.com/F97019299A?sck=HOTMART_PRODUCT_PAGE&off=5uu9tnsp&hotfeature=32&_gl=1*99wxb2*_gcl_au*MjEwNzg0NjE3Ny4xNzQzMzU5MzQz*_ga*NzE4NzU4Nzk1LjE3MjcxODI1MTc.*_ga_GQH2V1F11Q*MTc0MzM2NjkwNS4xOC4xLjE3NDMzNjY5NTcuOC4wLjA.&bid=1743366990045" class="button success">💥 ¡Suscríbete Ahora!! 🎓</a>
-        <a href="https://go.hotmart.com/U98763713E?ap=b74d" class="button alert">🔥 80% de Descuento - Solo 35 USD Cupos Limitados</a>
-        <a href="https://chat.whatsapp.com/EtEuHeRjAsFKYGGcgm5eVc" class="button secondary">🎓 Únete a nuestra Master Class Gratis</a>
-        <a href="https://wa.link/b03kjm" class="button warning">📞 Contáctanos para más información</a>
+        <a href="https://pay.hotmart.com/F97019299A?sck=HOTMART_PRODUCT_PAGE&off=5uu9tnsp&hotfeature=32&_gl=1*99wxb2" class="button success">💥 ¡Suscríbete Ahora!! 🎓</a>
+        <a href="https://go.hotmart.com/U98763713E?ap=b74d" class="button alert">🔥 80% de Descuento - Solo 35 USD</a>
+        <a href="https://chat.whatsapp.com/EtEuHeRjAsFKYGGcgm5eVc" class="button secondary">🎓 Únete a nuestra Master Class</a>
+        <a href="https://wa.link/b03kjm" class="button warning">📞 Contáctanos</a>
     </div>
 </body>
 </html>
