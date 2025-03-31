@@ -41,13 +41,24 @@
             0% { opacity: 0; }
             100% { opacity: 1; }
         }
-        iframe {
+
+        .video-container {
+            position: relative;
             width: 100%;
-            height: 65vh;
-            min-height: 300px;
-            max-height: 600px;
-            border: none;
+            padding-bottom: 56.25%; /* Aspect ratio 16:9 */
+            height: 0;
+            overflow: hidden;
         }
+
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Hace que el video ocupe todo el espacio sin bordes */
+        }
+
         .button {
             display: block;
             width: 95%;
@@ -73,6 +84,7 @@
         .button.warning:hover { background: #e0a800; }
         .button.success { background: #28a745; color: white; }
         .button.success:hover { background: #218838; }
+
         @media (max-width: 600px) {
             h2 {
                 font-size: 24px;
@@ -82,9 +94,8 @@
                 width: 130px;
                 height: 130px;
             }
-            iframe {
-                height: 55vh;
-                min-height: 250px;
+            .video-container {
+                padding-bottom: 56.25%;
             }
             .button {
                 font-size: 18px;
@@ -94,9 +105,18 @@
     </style>
 </head>
 <body>
-    <iframe src="https://www.youtube.com/embed/TbNqSJjbOc0?autoplay=1&mute=1" allow="autoplay; encrypted-media" allowfullscreen></iframe>
     <img src="img/logo.jpg" alt="Logo de la empresa" class="logo">
     <h2>Descubre Nuestra Oferta Especial</h2>
+
+    <!-- Video contenedor con reproducción automática y sin bordes -->
+    <div class="video-container">
+        <iframe id="youtube-video" 
+            src="https://www.youtube.com/embed/TbNqSJjbOc0?autoplay=1&mute=0&loop=1&playlist=TbNqSJjbOc0&modestbranding=1&rel=0&cc_load_policy=0&showinfo=0&controls=1" 
+            allow="autoplay; encrypted-media" 
+            allowfullscreen>
+        </iframe>
+    </div>
+
     <a href="https://go.hotmart.com/U98763713E" class="button primary">🌐 Página Oficial</a>
     <a href="https://pay.hotmart.com/F97019299A?sck=HOTMART_PRODUCT_PAGE&off=5uu9tnsp&hotfeature=32&_gl=1*99wxb2*_gcl_au*MjEwNzg0NjE3Ny4xNzQzMzU5MzQz*_ga*NzE4NzU4Nzk1LjE3MjcxODI1MTc.*_ga_GQH2V1F11Q*MTc0MzM2NjkwNS4xOC4xLjE3NDMzNjY5NTcuOC4wLjA.&bid=1743366990045" class="button success">💥 ¡Suscríbete Ahora!! 🎓</a>
     <a href="https://go.hotmart.com/U98763713E?ap=b74d" class="button alert">🔥 80% de Descuento - Solo 35 USD Cupos Limitados</a>
