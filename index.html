@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aprende Sublimacion</title>
+    <title>Aprende Sublimación</title>
     <link rel="icon" href="img/logo.jpg">
     <style>
         body, html {
@@ -16,6 +16,7 @@
             background: url('img/fondo.png') no-repeat center center fixed;
             background-size: cover;
         }
+
         .logo {
             width: 150px;
             height: 150px;
@@ -24,7 +25,8 @@
             margin-bottom: 15px;
             border: 3px solid white;
             box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-        }  
+        }
+
         h2 {
             font-size: 32px;
             font-weight: bold;
@@ -34,10 +36,11 @@
             letter-spacing: 2px;
             animation: fadeIn 1.5s ease-out;
             color: #f73c1b;
-            background-color: rgba(255, 255, 255, 0.8); /* Fondo más opaco */
+            background-color: rgba(255, 255, 255, 0.8);
             padding: 15px 25px;
             border-radius: 30px;
         }
+
         @keyframes fadeIn {
             0% { opacity: 0; }
             100% { opacity: 1; }
@@ -46,18 +49,20 @@
         .video-container {
             position: relative;
             width: 100%;
-            padding-bottom: 56.25%; /* Aspect ratio 16:9 */
+            padding-bottom: 56.25%;
             height: 0;
             overflow: hidden;
+            margin-bottom: 20px;
         }
 
-        .video-container iframe {
+        .video-container iframe,
+        .video-container video {
             position: absolute;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
-            object-fit: cover; /* Hace que el video ocupe todo el espacio sin bordes */
+            object-fit: cover;
         }
 
         .button {
@@ -76,59 +81,59 @@
             box-shadow: 0 4px 6px rgba(0,0,0,0.1);
         }
 
-        /* Botón Primario */
         .button.primary {
-            background: rgba(0, 123, 255, 0.8); /* Fondo azul con opacidad del 80% */
+            background: rgba(0, 123, 255, 0.8);
             color: white;
             border-color: #007BFF;
         }
         .button.primary:hover {
             background: #007BFF;
             color: white;
+            transform: scale(1.05);
         }
 
-        /* Botón Secundario */
         .button.secondary {
-            background: rgba(40, 167, 69, 0.8); /* Fondo verde con opacidad del 80% */
+            background: rgba(40, 167, 69, 0.8);
             color: white;
             border-color: #28a745;
         }
         .button.secondary:hover {
             background: #28a745;
             color: white;
+            transform: scale(1.05);
         }
 
-        /* Botón de Alerta */
         .button.alert {
-            background: rgba(220, 53, 69, 0.8); /* Fondo rojo con opacidad del 80% */
+            background: rgba(220, 53, 69, 0.8);
             color: white;
             border-color: #dc3545;
         }
         .button.alert:hover {
             background: #dc3545;
             color: white;
+            transform: scale(1.05);
         }
 
-        /* Botón de Advertencia */
         .button.warning {
-            background: rgba(255, 193, 7, 0.8); /* Fondo amarillo con opacidad del 80% */
+            background: rgba(255, 193, 7, 0.8);
             color: black;
             border-color: #ffc107;
         }
         .button.warning:hover {
             background: #ffc107;
             color: black;
+            transform: scale(1.05);
         }
 
-        /* Botón de Éxito */
         .button.success {
-            background: rgba(40, 167, 69, 0.8); /* Fondo verde con opacidad del 80% */
+            background: rgba(40, 167, 69, 0.8);
             color: white;
             border-color: #28a745;
         }
         .button.success:hover {
             background: #28a745;
             color: white;
+            transform: scale(1.05);
         }
 
         @media (max-width: 600px) {
@@ -140,9 +145,6 @@
                 width: 130px;
                 height: 130px;
             }
-            .video-container {
-                padding-bottom: 56.25%;
-            }
             .button {
                 font-size: 18px;
                 padding: 16px;
@@ -151,10 +153,10 @@
     </style>
 </head>
 <body>
-    <img src="img/logo.jpg" alt="Logo de la empresa" class="logo">
+    <img src="img/logo.jpg" alt="Logo del curso Aprende Sublimación" class="logo">
     <h2>Descubre Nuestra Oferta Especial</h2>
 
-    <!-- Video contenedor con reproducción automática y sin bordes -->
+    <!-- Video de YouTube -->
     <div class="video-container">
         <iframe id="youtube-video" 
             src="https://www.youtube.com/embed/TbNqSJjbOc0?autoplay=1&mute=0&loop=1&playlist=TbNqSJjbOc0&modestbranding=1&rel=0&cc_load_policy=0&showinfo=0&controls=1" 
@@ -163,15 +165,17 @@
         </iframe>
     </div>
 
+    <!-- Botones -->
     <a href="https://go.hotmart.com/U98763713E" class="button primary">🌐 Página Oficial</a>
     <a href="https://pay.hotmart.com/F97019299A?sck=HOTMART_PRODUCT_PAGE&off=5uu9tnsp&hotfeature=32&_gl=1*99wxb2*_gcl_au*MjEwNzg0NjE3Ny4xNzQzMzU5MzQz*_ga*NzE4NzU4Nzk1LjE3MjcxODI1MTc.*_ga_GQH2V1F11Q*MTc0MzM2NjkwNS4xOC4xLjE3NDMzNjY5NTcuOC4wLjA.&bid=1743366990045" class="button success">💥 ¡Suscríbete Ahora!! 🎓</a>
     <a href="https://go.hotmart.com/U98763713E?ap=b74d" class="button alert">🔥 85% de Descuento - Solo 35 USD Cupos Limitados</a>
-    <a href="https://chat.whatsapp.com/GwnASjLsbp5CmKMZXMqht1" class="button secondary">🎓 Únete a nuestro Grupo de WhatsApp  para una Master Class Gratuita</a>
+    <a href="https://chat.whatsapp.com/GwnASjLsbp5CmKMZXMqht1" class="button secondary">🎓 Únete a nuestro Grupo de WhatsApp para una Master Class Gratuita</a>
     <a href="https://wa.link/zl1p7r" class="button warning">📞 Contáctanos para más información</a>
-        <div class="video-container">
-        <video controls autoplay muted loop>
+     <h2>CURSO DE SUBLIMACIÓN  POR DENTRO </h2>
+    <!-- Video local "Curso por dentro" -->
+    <div class="video-container">
+        <video autoplay muted loop controls playsinline>
             <source src="video/Curso por dentro.mp4" type="video/mp4">
-            
             Tu navegador no soporta la reproducción de video.
         </video>
     </div>
